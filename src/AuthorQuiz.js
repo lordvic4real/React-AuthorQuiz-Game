@@ -44,10 +44,10 @@ function Turn({ author, books, highlight, onAnswerSelected }) {
       className="row turn"
       style={{ backgroundColor: highlightToBgColor(highlight) }}
     >
-      <div className="col-4 offset-1">
+      <div className="col-md-4 col-sm-12 col-xs-12 offset-1">
         <img src={author.imageUrl} className="authorimage" alt="Author" />
       </div>
-      <div className="col-6">
+      <div className="col-md-6 col-sm-12 col-xs-12">
         {books.map((title) => (
           <Book title={title} key={title} onClick={onAnswerSelected} />
         ))}
@@ -69,7 +69,7 @@ Turn.propTypes = {
 
 function Continue({ show, onContinue }) {
   return (
-    <div className="row continue">
+    <div className="row continue mt-5">
       {show ? (
         <div className="col-11">
           <button
